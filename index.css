@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lobster&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Gluten:wght@200&family=Lobster&family=Pacifico&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    text-decoration: none;
+    list-style-type: none;
+   
+}
+body{
+    background-image: url(watercolour-1325656__480.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   
+    
+}
+main{
+    
+    min-height: 100vh;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 5px rgb(49, 58, 58);
+    background: linear-gradient(to right, rgb(2, 201, 201), rgb(8, 94, 94));
+    /* overflow: scroll; */
+}
+
+header{
+   
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: 'Lobster', cursive;
+    text-shadow: 2px 2px 2px white;
+    
+    
+}
+
+.date{
+    display: flex;
+    justify-content: space-evenly;
+    
+
+    
+}
+.refresh{
+    cursor: pointer;
+    margin-top: 2rem;
+   
+    width: 3rem;
+    font-size: 2rem;
+    height: 3rem;
+    border-radius: 50%;
+    color: rgb(113, 247, 3);
+    background-color: rgb(4, 160, 160);
+    border: none;
+    box-shadow: 5px 5px 5px rgb(3, 202, 228);
+}
+.refresh  :hover{
+    transition: 1s;
+    color: rgb(240, 247, 245);
+   
+    
+        
+}
+
+.real-date-time{
+    
+    
+    width: max-content;
+    font-family: 'Gluten', cursive;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    font-weight: 900;
+    box-shadow: 5px 5px 5px;
+    line-height: 1.2rem;
+    border-radius: 5px;
+    color: rgb(70, 19, 3);
+    background-color: rgb(4, 160, 160);
+    padding: 1rem;
+  
+    
+}
+    
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.container__parag{
+    margin-bottom: 1rem ;
+    font-family: 'Gluten', cursive;
+    font-size: 2rem;
+    text-shadow: 1px 1px 1px;
+}
+.container_input{
+    
+    width: 60%;
+   display: flex;
+}
+.container__input{
+    width: 100%;
+    height: 1.4rem;
+    border: none;
+    font-family: 'Lobster', cursive;
+}
+.container__button{
+    
+    left: 23.4rem;
+    border: none;
+    width: 1.8rem;
+    height: 1.4rem;
+    
+    background-color: rgb(5, 252, 190);
+    color: rgb(21, 95, 21);
+
+}
+
+.area{
+   max-width: 80%;
+    display:flex ;
+    justify-content: flex-start;
+    color: rgb(182, 5, 93);
+    
+}
+.to-dos-area{
+    margin-top: 1rem;
+    cursor: pointer;
+    max-width: 100%;
+  
+}
+#arrow{
+    cursor: pointer;
+    width: 1rem;
+   display: none;
+    margin-left: rem;
+    margin-top: -1.5rem;
+    padding-left: 1rem;
+    color: rgb(20, 37, 2);
+
+
+}
+
+.to-do{
+    /* box-sizing: border-box; */
+    text-overflow:clip;
+    word-wrap: break-word;
+   
+    background-color: rgb(4, 160, 160);
+    color: rgb(70, 19, 3);
+    font-size: .8rem;
+    line-height: 1rem;
+    margin-bottom: .6rem;
+    padding: .3rem;
+    border-radius: .3rem;
+    box-shadow: 5px 5px 5px ;
+    font-family: 'Gluten', cursive;
+    
+}
+.as{
+    display: none;
+}
+
+
+@media(max-width:1030px){
+    main{
+        width: 70%;
+    }
+}
+@media(max-width:850px){
+    main{
+        width: 70%;
+    }
+}
+@media(max-width:720px){
+    main{
+        width: 75%;
+    }
+}
+@media(max-width:570px){
+    main{
+        width: 90%;
+    }
+    #arrow{
+    
+        margin-left: 1.5rem;
+        
+    
+    }
+}
+.container__parag{
+    
+    font-size: 1.2rem;
+    
+}
+@media(max-width:470px){
+    main{
+        width: 80%;
+    }
+    header{
+        font-size: 1.5rem;
+       
+    }
+    .container__parag{
+        
+        font-size: 1.2rem;
+        
+}
+#arrow{
+    
+    margin-left: .1rem;
+   
+    
+
+}
+.to-do{
+    max-width: 90%;
+    margin: auto;
+}
+.real-date-time{
+    width: max-content;
+    margin: auto;
+    margin-top: 2rem;
+}
+.date{
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+
+}
+}
