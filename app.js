@@ -58,3 +58,9 @@ todoBtn.addEventListener('click',()=>{
    
    
 })
+inputField.addEventListener('keyup',(e)=>{
+    if(e.code == 'Enter'){
+        e.preventDefault();
+        document.querySelector('.container__button').click()
+    }
+})
