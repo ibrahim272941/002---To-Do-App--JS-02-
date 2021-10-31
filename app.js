@@ -1,9 +1,9 @@
-const inputField = document.querySelector('.container__input');
-const todoBtn = document.querySelector('.container__button');
-const toDoArea = document.querySelector('.to-dos-area');
-const arrow = document.querySelector('#arrow')
+const form = document.querySelector('.container_input');
+const inputField = document.querySelector('.container__input')
+const todoBtn = document.querySelector('.input-button');
+const toDoArea = document.querySelector('.area');
+
 const date = document.querySelector('.real-date-time')
-const all = document.querySelector('body')
 
 const realDate = {hour:'numeric', minute:'numeric' ,weekday : 'long',month : 'short' ,day : 'numeric' }
 
@@ -11,56 +11,57 @@ const today = new Date();
 
 date.innerHTML=today.toLocaleDateString('en-US',realDate)
 
-todoBtn.addEventListener('click',()=>{
-   let words = document.createElement('p');
-   
-   words.classList.add('to-do')
-   words.innerText = `${inputField.value} (${date.innerHTML})`
- 
+form.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    const input = `${inputField.value }  ${date.innerHTML}`
+    if(inputField.value ==='')return
+    const taskArea = document.createElement('div')
+    taskArea.classList.add('area')
+    
+    const taskContent = document.createElement('div')
+    taskContent.classList.add('to-dos-area')
+    
+    taskArea.appendChild(taskContent)
+    
+    const inputElement = document.createElement('textarea')
+    inputElement.type='textarea'
+   inputElement.cols = '124'
   
-   toDoArea.appendChild(words)
-   arrow.style.display='block'
-   inputField.value=''
+
+    inputElement.classList.add('text')
+    inputElement.value=input
+    inputElement.setAttribute('readonly','readonly')
+    taskContent.appendChild(inputElement)
+
+   const actionElement=document.createElement('div')
+   actionElement.classList.add('action')
    
+  
+   const doneElement = document.createElement('button')
+   doneElement.classList.add('done')
+   doneElement.innerText='Done'
+   actionElement.appendChild(doneElement)
 
-   words.addEventListener('click',()=>{
-       
-       words.style.cursor='pointer'
-       
-       words.style.textDecorationColor='rgb(145,80,80)'
-       words.style.textDecorationStyle='double'
-       words.style.textDecorationLine='line-through'
-       words.style.backgroundColor = 'rgb(5, 252, 190)'
-       words.style.opacity='.7'
-       
-       
-   })
-   arrow.addEventListener('click',()=>{
+   const delElement = document.createElement('button')
+   delElement.classList.add('delete')
+   delElement.innerText='Delete'
+   actionElement.appendChild(delElement)
+
+   taskContent.appendChild(actionElement)
 
 
 
 
-    arrow.style.cursor='pointer'
-    words.style.cursor='pointer'
-       
-    words.style.textDecorationColor='rgb(145,80,80)'
-    words.style.textDecorationStyle='none'
-    words.style.textDecorationLine='none'
-    words.style.backgroundColor = 'rgb(4, 160, 160)'
-    words.style.opacity='.9'
-   })
-   words.addEventListener('dblclick',()=>{
-       words.style.cursor='pointer'
-       words.style.display='none'
-       
-   })
+    toDoArea.appendChild(taskArea)
+    
+    
+    delElement.addEventListener('click',()=>{
+        toDoArea.removeChild(taskArea)
+    })
+    doneElement.addEventListener('click',()=>{
+        inputElement.style.background='linear-gradient(to right, rgb(12, 236, 98), rgb(128, 219, 143))'
+    })
+    inputField.value=''
 
-   
-   
 })
-inputField.addEventListener('keyup',(e)=>{
-    if(e.code == 'Enter'){
-        e.preventDefault();
-        document.querySelector('.container__button').click()
-    }
-})
+
