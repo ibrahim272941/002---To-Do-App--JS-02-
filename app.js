@@ -63,5 +63,9 @@ form.addEventListener('submit',(e)=>{
     })
     inputField.value=''
 
+    inputElement.addEventListener('click',()=>{
+        inputElement.style.background='linear-gradient(to right, rgb(145, 248, 248), rgb(5, 185, 185))'
+    })
+
 })
 

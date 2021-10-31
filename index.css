@@ -129,7 +129,7 @@ header{
 h2{
    
     font-family: 'Gluten', cursive;
-    margin-bottom: 1rem;
+    margin-bottom: .1rem;
     font-size: 3rem
 }
 .input-button{
@@ -156,7 +156,7 @@ h2{
 .area{
 
    max-width: 100%;
-    margin-top: 3rem;
+    margin-top: 1.4rem;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -175,7 +175,7 @@ h2{
     
 }
 .to-dos-area .text{
-  
+  cursor: pointer;
    padding-top: .9rem;
    padding-left: .5rem;
     flex: 1 1 0%;
@@ -187,7 +187,7 @@ h2{
     font-size: 1rem;
     box-shadow:  1px 3px 2px rgb(49, 58, 58);
     background: linear-gradient(to right, rgb(145, 248, 248), rgb(5, 185, 185));
-    
+    resize: none;
     
 
 }
