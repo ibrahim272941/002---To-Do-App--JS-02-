@@ -238,29 +238,90 @@ h2{
     main{
         width: 70%;
     }
+    
+  
+    .container_input{
+        width:40% ;
+      height: 2.5rem;
+        justify-content: center;
+      
+
+}
+.area .to-dos-area{
+    
+    width: 80%;
+   height: 2.5rem;
+    
+}
+.to-dos-area .done{
+    height: 2.5rem;
+}
+.to-dos-area .delete{
+    height: 2.5rem;
+}
+
+
+
+
 }
 @media(max-width:720px){
     main{
         width: 75%;
     }
+
+    .container_input{
+        width:40% ;
+      height: 2rem;
+        justify-content: center;
+      
+
 }
-@media(max-width:570px){
+.area .to-dos-area{
+    
+    width: 80%;
+   height: 2rem;
+    
+}
+.to-dos-area .done{
+    height: 2rem;
+}
+.to-dos-area .delete{
+    height: 2rem;
+}
+}
+@media(max-width:640px){
     main{
         width: 90%;
     }
-    #arrow{
-    
-        margin-left: 1.5rem;
-        
-    
-    }
+
+    .container_input{
+        width:40% ;
+      height: 2rem;
+        justify-content: center;
+      
+
 }
+.area .to-dos-area{
+    
+    width: 80%;
+   height: 2rem;
+    
+}
+.to-dos-area .done{
+    height: 2rem;
+}
+.to-dos-area .delete{
+    height: 2rem;
+}
+    
+
 .container__parag{
     
     font-size: 1.2rem;
     
 }
-@media(max-width:470px){
+}
+@media(max-width:550px){
     main{
         width: 80%;
     }
@@ -273,13 +334,43 @@ h2{
         font-size: 1.2rem;
         
 }
-#arrow{
-    
-    margin-left: .1rem;
-   
-    
+.container_input{
+    width: 90%;
+  height: 2rem;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+  
 
 }
+
+.container__input{
+    margin-top: 1.9rem;
+    margin-bottom: .6rem;
+height: 1.5rem;
+font-size: 1rem;
+}
+.input-button{
+    padding: .5rem;
+    margin-right: .4rem;
+}
+.area .to-dos-area{
+
+width: 80%;
+height: 2rem;
+
+}
+h2{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+.to-dos-area .done{
+height: 2rem;
+}
+.to-dos-area .delete{
+height: 2rem;
+}
+
 .to-do{
     max-width: 90%;
     margin: auto;
@@ -297,3 +388,30 @@ h2{
 
 }
 }
+@media(max-width:390px){
+
+    h2{
+        font-size: 1.4rem;
+    }
+    .to-dos-area .done{
+        height: 2rem;
+        width: 2rem;
+        font-size: .6rem;
+        }
+        .to-dos-area .delete{
+        height: 2rem;
+        width: 2rem;
+        font-size: .6rem;
+        }
+        
+        .area .to-dos-area{
+    
+            width: 85%;
+         
+            
+        }
+        .to-dos-area .text{
+          
+          font-size: .7rem;
+            
+}}
