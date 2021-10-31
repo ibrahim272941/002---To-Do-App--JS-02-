@@ -387,6 +387,11 @@ height: 2rem;
     align-items: center;
 
 }
+.to-dos-area .text{
+          
+    font-size: .7rem;
+      
+}
 }
 @media(max-width:390px){
 
